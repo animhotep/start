@@ -1,19 +1,12 @@
-$(function(){
-	var CMainPage = function(){
-		this.init();
+// обработчиков событий
+var li = document.getElementsByTagName("li");
+
+for ( var i = 0; i < li.length; i++ ) {
+	li[i].onmouseover = function() {
+		this.style.backgroundColor = 'blue';
 	};
-});
 
-CMainPage.prototype.init = function()
-{
-  this.initProfile();
-};
-
-
-CMainPage.prototype.initProfile = function()
-{
-  $('.something').on('click', function(){
-    $('.something_else').toggle();
-	return false;
-  });
-};
+	li[i].onmouseout = function() {
+		this.style.backgroundColor = 'white';
+	};
+}
